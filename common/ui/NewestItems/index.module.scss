@@ -1,0 +1,20 @@
+.newestItems {
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 56px;
+  }
+
+  &__subtitle {
+    width: 100%;
+    margin-bottom: 24px;
+
+    font-size: 26px;
+    font-family: 'Roboto Bold', sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+    color: var(--paleBlack);
+    text-decoration: none;
+  }
+}

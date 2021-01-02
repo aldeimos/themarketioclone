@@ -1,0 +1,35 @@
+.navigation {
+  flex: 1;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__itemSell {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+
+  &__itemLogin {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+
+    font-size: 14px;
+
+    color: var(--primary);
+    text-decoration: none;
+
+    border: none;
+    background-color: transparent;
+
+    appearance: none;
+  }
+}
