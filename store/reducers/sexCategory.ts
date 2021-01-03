@@ -1,12 +1,11 @@
 import { List, Map } from 'immutable';
 
 import * as actions from '../../common/constants/actions/sexCategory';
-import { mapGenericList } from './abstract';
+import { mapCategoriesList } from './abstract';
 
 export const defaultState = Map({
   menCategories: Map({}),
-  womenCategories: Map({}),
-  keys: List([])
+  womenCategories: Map({})
 });
 
 const state = (sexCategory = defaultState, { type, payload }: any) => {
@@ -16,8 +15,10 @@ const state = (sexCategory = defaultState, { type, payload }: any) => {
     case actions.FETCH_SEX_CATEGORIES: {
       const { sexCategories } = payload;
       const [menCategories, womenCategories] = sexCategories;
-      newState = mapGenericList('menCategories', newState, menCategories.categories);
-      newState = mapGenericList('womenCategories', newState, womenCategories.categories);
+
+      newState = mapCategoriesList('menCategories', newState, menCategories);
+      newState = mapCategoriesList('womenCategories', newState, womenCategories);
+
       break;
     }
     default:

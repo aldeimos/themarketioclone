@@ -11,6 +11,22 @@
     height: 100%;
   }
 
+  &__item_man {
+    &:hover {
+      >div {
+        display: block;
+      }
+    }
+  }
+
+  &__item_women {
+    &:hover {
+      >div {
+        display: block;
+      }
+    }
+  }
+
   &__itemSell {
     margin-left: auto;
     margin-right: 40px;
@@ -31,5 +47,10 @@
     background-color: transparent;
 
     appearance: none;
+  }
+
+  &__overlay {
+    bottom: -1px;
+    transform: translateY(100%);
   }
 }

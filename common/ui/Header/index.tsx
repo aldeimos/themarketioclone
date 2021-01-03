@@ -1,19 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 import logo from '../../../public/icons/logo_header.svg';
-import { getMenCategories } from '../../../store/selectors/sexCategory';
 import InputSearch from '../InputSearch';
 import Navigation from '../Navigation';
 import styles from './index.module.scss';
 
-export const Header: React.FC = () => {
-  const menCategories = useSelector((state: any) => getMenCategories(state));
-
-  console.log(menCategories);
-
+const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
+    <header className={`header ${styles.header}`}>
       <div className={`${styles.header__container} container`}>
         <div className={styles.header__wrapper}>
           <img src={logo} alt="Лого" width={80} height={12} />

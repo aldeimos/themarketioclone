@@ -1,18 +1,30 @@
-import { Map } from 'immutable';
+import { List, Map } from 'immutable';
 
-export const mapGenericList = (entityName: string, state: any, data: any) => {
+export const mapCategoriesList = (categoryName: string, state: any, data: any) => {
+  const { categories, name } = data;
   let newState = state;
-  const keys = newState.get('keys');
+  const baseRelativeUrl = `/search?sex=${name}&concreteCategoryIds=`;
 
-  let entities = Map({});
+  let category = Map({ ...data });
+  let subCategories = List([]);
 
-  data.forEach((item: any) => {
-    const mappedItem = Map(item);
+  categories.forEach((item: any) => {
+    const subCategoriesIds: number[] = [];
 
-    entities = entities.set(item.id, mappedItem);
+    item.concreteCategories.forEach((subCategory) => {
+      subCategory.relativeUrl = `${baseRelativeUrl}${subCategory.id}`;
+      subCategoriesIds.push(subCategory.id);
+    });
+
+    item.relativeUrl = `${baseRelativeUrl}${subCategoriesIds.join(',')}`;
+
+    subCategories = subCategories.push(item);
+    subCategoriesIds.push(item.id);
   });
 
-  newState = newState.set(entityName, entities).set('keys', keys);
+  category = category.set('categories', subCategories);
+
+  newState = newState.set(categoryName, category);
 
   return newState;
 };

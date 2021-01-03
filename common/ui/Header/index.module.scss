@@ -1,9 +1,13 @@
 .header {
+  position: fixed;
+
   display: flex;
+  width: 100%;
   align-items: center;
   height: 71px;
 
   border-bottom: 1px solid var(--gray);
+  background-color: var(--secondary);
 
   &__container {
     height: 100%;
