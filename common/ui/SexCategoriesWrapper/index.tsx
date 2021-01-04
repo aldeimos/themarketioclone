@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ProductCategory, SexCategory } from '../../../store/types';
+import { SexCategory } from '../../../store/types';
 import MenuLink from '../MenuLink';
 import styles from './index.module.scss';
 
@@ -8,7 +8,7 @@ interface SexCategoriesWrapperProps {
   category: SexCategory;
 }
 
-export const SexCategoriesWrapper: React.FC<SexCategoriesWrapperProps> = ({ category }) => {
+const SexCategoriesWrapper: React.FC<SexCategoriesWrapperProps> = ({ category }) => {
   const { categories } = category;
 
   const renderedCategories = categories.map((category) => {

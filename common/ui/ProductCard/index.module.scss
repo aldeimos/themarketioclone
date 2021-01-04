@@ -1,0 +1,85 @@
+.product {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+  }
+
+  &__slider {
+    margin-bottom: 8px;
+  }
+
+  &__statuses {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
+  &__protected {
+    width: 11px;
+    height: 14px;
+    margin-right: 5px;
+
+    background-repeat: no-repeat;
+    background-image: url('../../../public/icons/protected_shield.svg');
+  }
+
+  &__boosted {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+
+    background-repeat: no-repeat;
+    background-image: url('../../../public/icons/boosted_card.svg');
+  }
+
+  &__date {
+    line-height: 12px;
+    font-size: 12px;
+    color: var(--paleGray);
+  }
+
+  &__brand {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--primary);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__model,
+  &__size {
+    font-size: 14px;
+    line-height: 20px;
+
+    color: var(--paleGray);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    margin-top: 3px;
+
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 14px;
+    color: var(--primary);
+
+    &_highlighted {
+      display: inline-block;
+      padding: 2px 10px;
+
+      font-family: 'Roboto Medium', sans-serif;
+      color: var(--secondary);
+
+      background-color: var(--accent-green);
+      border-radius: 3px;
+    }
+  }
+}

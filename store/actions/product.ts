@@ -8,10 +8,8 @@ export const getWomenNewestProducts = () => async (
 ): Promise<unknown> => {
   const response = await makeApiCall(API_ROUTES.newestWomen, { method: 'GET' });
   const correctPayload = {
-    data: {
-      items: [...response],
-      genderType: 'women'
-    }
+    data: [...response],
+    gender: 'women'
   }; // Булщит, чтобы отличать в редьюсере, для какого гендера популярные товары
 
   return dispatch({
@@ -25,10 +23,8 @@ export const getManNewestProducts = () => async (
 ): Promise<unknown> => {
   const response = await makeApiCall(API_ROUTES.newestMan, { method: 'GET' });
   const correctPayload = {
-    data: {
-      items: [...response],
-      genderType: 'man'
-    }
+    data: [...response],
+    gender: 'men'
   }; // Булщит, чтобы отличать в редьюсере, для какого гендера популярные товары
 
   return dispatch({

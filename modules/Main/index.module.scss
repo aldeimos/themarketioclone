@@ -1,5 +1,21 @@
 .main {
   &__wrapper {
-    padding-top: 70px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 126px 0 82px 0;
+  }
+
+  &__leftColumn {
+    width: 860px;
+  }
+
+  &__rightColumn {
+    width: calc(100% - 890px);
+  }
+
+  &__indent {
+    margin-bottom: 47px;
   }
 }

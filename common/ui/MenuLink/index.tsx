@@ -11,7 +11,7 @@ interface MenuLinkProps {
 
 // TODO template one of templates type
 
-export const MenuLink: React.FC<MenuLinkProps> = ({ children, linkHref, template = 'default' }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({ children, linkHref, template = 'default' }) => {
   return (
     <Link href={linkHref}>
       <a className={`${styles.link} ${styles[`link_${template}`]}`}>{children}</a>

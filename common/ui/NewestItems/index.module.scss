@@ -3,7 +3,6 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 56px;
   }
 
   &__subtitle {
@@ -16,5 +15,30 @@
     line-height: 30px;
     color: var(--paleBlack);
     text-decoration: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    >div {
+      width: 260px;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__showMore {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 17px;
+    color: var(--paleGray);
+    text-decoration: none;
+  }
+
+  &__navArrow {
+    margin-left: 4px;
   }
 }

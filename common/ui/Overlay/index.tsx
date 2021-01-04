@@ -7,7 +7,7 @@ interface OverlayProps {
   ownStyles?: string;
 }
 
-export const Overlay: React.FC<OverlayProps> = ({ children, ownStyles = '' }) => {
+const Overlay: React.FC<OverlayProps> = ({ children, ownStyles = '' }) => {
   return (
     <div className={`${ownStyles} ${styles.overlay}`}>
       <div className="container">{children}</div>

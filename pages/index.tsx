@@ -1,4 +1,4 @@
-import { Main } from '../modules/Main';
+import Main from '../modules/Main';
 import { wrapper } from '../store';
 import { getManNewestProducts, getWomenNewestProducts } from '../store/actions/product';
 import { getCategories } from '../store/actions/sexCategory';

@@ -7,7 +7,7 @@ import Overlay from '../Overlay';
 import SexCategoriesWrapper from '../SexCategoriesWrapper';
 import styles from './index.module.scss';
 
-export const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {
   const menCategory = useSelector((state: any) => getMenCategories(state));
   const womenCategory = useSelector((state: any) => getWomenCategories(state));
 

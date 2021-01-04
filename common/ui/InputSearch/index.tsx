@@ -3,7 +3,7 @@ import React from 'react';
 import searchIcon from '../../../public/icons/loop.svg';
 import styles from './index.module.scss';
 
-export const InputSearch: React.FC = () => {
+const InputSearch: React.FC = () => {
   return (
     <label className={styles.inputSearch}>
       <span className={styles.inputSearch__icon}>

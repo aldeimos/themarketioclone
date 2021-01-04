@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), url('../common/fonts/Roboto-Medium.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'Roboto Bold';
   font-style: normal;
   font-weight: bold;
@@ -20,7 +28,9 @@
   --gray: #d6e6e4;
   --darkgray: #a6a6a6;
   --paleBlack: #2e2e2e;
+  --paleGray: #9b9b9b;
   --lightBlue: #1d9bc9;
+  --accent-green: #63bb00;
 }
 
 *,
@@ -42,6 +52,10 @@ ul {
   padding: 0;
 
   list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
 }
 
 button {
