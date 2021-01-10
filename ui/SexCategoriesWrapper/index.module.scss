@@ -1,0 +1,30 @@
+.categoriesOverlay {
+  display: flex;
+  background-color: var(--secondary);
+
+  &__column {
+    flex: 1;
+    max-width: 200px;
+    padding: 25px 0 55px 0;
+
+    >a {
+      font-family: 'Roboto Bold', sans-serif;
+      font-weight: bold;
+    }
+  }
+
+  a {
+    height: auto;
+    padding: 0;
+
+    line-height: 30px;
+
+    &:hover {
+      &::before {
+        content: none !important;
+      }
+
+      color: var(--lightBlue);
+    }
+  }
+}

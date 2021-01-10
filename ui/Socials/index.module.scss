@@ -1,0 +1,9 @@
+.socials {
+  display: flex;
+
+  &__item {
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+  }
+}

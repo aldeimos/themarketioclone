@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 
 import { FETCH_SEX_CATEGORIES } from '../../common/constants/actions/sexCategory';
-import { API_ROUTES, makeApiCall } from '../../services/api';
+import { API_ROUTES, makeApiCall } from '../../services/api/api';
 
 export const getCategories = () => async (
   dispatch: Dispatch<{ type: string; payload: Promise<unknown> }>

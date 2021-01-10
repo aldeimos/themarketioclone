@@ -1,0 +1,29 @@
+.blog {
+  margin-top: 54px;
+  padding: 16px 20px;
+  background-color: var(--lightGray);
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    max-height: 40px;
+
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 19px;
+    line-height: 25px;
+
+    overflow: hidden;
+  }
+
+  &__content {
+    >a:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__footer {
+    margin-top: 35px;
+  }
+}

@@ -5,5 +5,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer(
-  withImages()
+  withImages({
+    env: {
+      API_URI: 'https://api.themarket.io'
+    }
+  })
 );

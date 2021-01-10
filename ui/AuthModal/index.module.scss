@@ -1,0 +1,81 @@
+.authModal {
+  width: 280px;
+  padding: 19px 24px;
+
+  &__subtitle {
+    display: block;
+
+    font-family: "Roboto Bold", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 19px;
+
+    &_step2 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    line-height: 10px;
+    color: var(--nastyGray);
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 20px;
+
+    border: none;
+    border-bottom: 1px solid var(--dirtyGray);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid var(--primary);
+    }
+  }
+
+  &__text {
+    margin-bottom: 19px;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--onyx);
+  }
+
+  &__loginBtn {
+    margin-bottom: 11px;
+  }
+
+  &__sendAgain {
+    margin-bottom: 16px;
+  }
+
+  &__sendCodeBtn {
+    margin-bottom: 16px;
+  }
+
+  &__subtext {
+    margin-bottom: 11px;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--nastyGray);
+    text-align: center;
+  }
+
+  &_step2 {
+    .authModal__label {
+      margin-bottom: 4px;
+    }
+  }
+}

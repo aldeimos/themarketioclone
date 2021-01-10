@@ -1,30 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import Header from '../../common/ui/Header';
-import NewestItems from '../../common/ui/NewestItems';
+import { getManNewestProducts, getWomenNewestProducts } from '../../store/actions/product';
+import Blog from '../../ui/Blog';
+import Footer from '../../ui/Footer';
+import Header from '../../ui/Header';
+import NewestItems from '../../ui/NewestItems';
+import Spinner from '../../ui/Spinner';
+import VkCommunityWidget from '../../ui/VkCommunityWidget';
 import styles from './index.module.scss';
 
 const Main: React.FC = () => {
+  const [isInit, setIsInit] = useState<boolean>(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => {
+      await Promise.all([getWomenNewestProducts()(dispatch), getManNewestProducts()(dispatch)]);
+      setIsInit(true);
+    })();
+  }, [dispatch]); // this is not good, but themarket api has JWT token stored in localStorage on the client
+
+  // TODO check if its useless re-renders
+
+  const itemsContent = isInit ? (
+    <>
+      <NewestItems title="Новое в мужском" genderType="men" ownStyles={styles.main__indent} />
+      <NewestItems title="Новое в женском" genderType="women" />
+    </>
+  ) : (
+    <Spinner />
+  );
+
   return (
     <>
       <Header />
-      <section>
+      <main>
         <div className="container">
           <div className={styles.main__wrapper}>
-            <div className={styles.main__leftColumn}>
-              <NewestItems
-                title="Новое в мужском"
-                genderType="men"
-                ownStyles={styles.main__indent}
-              />
-              <NewestItems title="Новое в женском" genderType="women" />
-            </div>
+            <div className={styles.main__leftColumn}>{itemsContent}</div>
             <div className={styles.main__rightColumn}>
-              <div>blog</div>
+              <div className={styles.main__blog}>
+                <Blog />
+              </div>
+              <VkCommunityWidget />
             </div>
           </div>
         </div>
-      </section>
+      </main>
+      <Footer />
     </>
   );
 };

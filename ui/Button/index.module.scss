@@ -1,0 +1,59 @@
+.button {
+  width: 100%;
+  height: 36px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_default {
+    color: var(--secondary);
+
+    background-color: var(--onyx);
+  }
+
+  &_vkLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--secondary);
+
+    background-color: var(--vkBlue);
+
+    img {
+      margin-right: 5px;
+
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &_linkLike {
+    height: auto;
+
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  &_stepBack {
+    height: auto;
+
+    font-family: "Roboto Medium", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--paleGray);
+
+    background-color: transparent;
+  }
+}

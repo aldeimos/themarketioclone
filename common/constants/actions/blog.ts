@@ -1,0 +1,1 @@
+export const FETCH_BLOG_LIST = 'FETCH_BLOG_LIST';

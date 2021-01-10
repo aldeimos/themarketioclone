@@ -1,0 +1,53 @@
+.productSlider {
+  position: relative;
+  display: flex;
+  height: 195px;
+
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    width: 100%;
+
+    transition: 0.4s;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__control {
+    position: absolute;
+    z-index: 5;
+
+    width: 60px;
+    height: 100%;
+    padding: 0;
+
+    appearance: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: 16px 27px;
+    background-position: center;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__control_prev {
+    left: 0;
+
+    background-image: url('../../public/icons/arrow-left.svg');
+  }
+
+  &__control_next {
+    right: 0;
+
+    background-image: url('../../public/icons/arrow-right.svg');
+  }
+}

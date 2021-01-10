@@ -1,4 +1,4 @@
-import { List, Map } from 'immutable';
+import { Map } from 'immutable';
 
 import * as actions from '../../common/constants/actions/sexCategory';
 import { mapCategoriesList } from './abstract';
@@ -8,7 +8,10 @@ export const defaultState = Map({
   womenCategories: Map({})
 });
 
-const state = (sexCategory = defaultState, { type, payload }: any) => {
+const state = (
+  sexCategory = defaultState,
+  { type, payload }: { type: string; payload: any }
+): any => {
   let newState = sexCategory;
 
   switch (type) {

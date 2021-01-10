@@ -1,0 +1,31 @@
+.blogPost {
+  display: flex;
+
+  text-decoration: none;
+
+  img {
+    margin-right: 15px;
+
+    border-radius: 3px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--primary);
+    }
+
+    time {
+      margin-bottom: 2px;
+
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--paleGray);
+    }
+  }
+}

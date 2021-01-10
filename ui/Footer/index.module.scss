@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid var(--gray);
+
+  &__wrapper {
+    padding: 17px 40px 42px 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--gray);
+  }
+
+  &__subinfo {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+
+    p {
+      font-size: 14px;
+      color: var(--paleGray);
+    }
+  }
+}

@@ -9,8 +9,10 @@ export const storeSubsection = (
   return store.get(props.entityName);
 };
 
-export const entityName = (store: Collection.Keyed<string, any>, props: { entityName: string }) =>
-  props.entityName;
+export const entityName = (
+  store: Collection.Keyed<string, any>,
+  props: { entityName: string }
+): string => props.entityName;
 
 export const ownEntityId = (
   store: Collection.Keyed<string, any>,

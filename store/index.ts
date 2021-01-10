@@ -5,7 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { combineReducers } from 'redux-immutable';
 import thunk from 'redux-thunk';
 
-import { product, sexCategory } from './reducers';
+import { blog, product, sexCategory, user } from './reducers';
 
 const composeEnhancers = composeWithDevTools({
   trace: process.env.NODE_ENV === 'development'
@@ -13,7 +13,9 @@ const composeEnhancers = composeWithDevTools({
 
 const rootReducer = combineReducers({
   product,
-  sexCategory
+  sexCategory,
+  blog,
+  user
 });
 
 const hydrationReducer = (state: any = Map({}), action: AnyAction) => {
