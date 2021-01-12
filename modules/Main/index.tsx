@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { getManNewestProducts, getWomenNewestProducts } from '../../store/actions/product';
-import Blog from '../../ui/Blog';
-import Footer from '../../ui/Footer';
-import Header from '../../ui/Header';
-import NewestItems from '../../ui/NewestItems';
-import Spinner from '../../ui/Spinner';
-import VkCommunityWidget from '../../ui/VkCommunityWidget';
+import Blog from '../../ui/components/Blog';
+import Footer from '../../ui/components/Footer';
+import Header from '../../ui/components/Header';
+import NewestItems from '../../ui/components/NewestItems';
+import Spinner from '../../ui/components/Spinner';
+import VkCommunityWidget from '../../ui/components/VkCommunityWidget';
+import PageContentTemplate from '../PageContentTemplate';
 import styles from './index.module.scss';
 
 const Main: React.FC = () => {
@@ -35,19 +36,15 @@ const Main: React.FC = () => {
   return (
     <>
       <Header />
-      <main>
-        <div className="container">
-          <div className={styles.main__wrapper}>
-            <div className={styles.main__leftColumn}>{itemsContent}</div>
-            <div className={styles.main__rightColumn}>
-              <div className={styles.main__blog}>
-                <Blog />
-              </div>
-              <VkCommunityWidget />
-            </div>
+      <PageContentTemplate>
+        <div className={styles.main__leftColumn}>{itemsContent}</div>
+        <div className={styles.main__rightColumn}>
+          <div className={styles.main__blog}>
+            <Blog />
           </div>
+          <VkCommunityWidget />
         </div>
-      </main>
+      </PageContentTemplate>
       <Footer />
     </>
   );

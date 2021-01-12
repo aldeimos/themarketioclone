@@ -9,7 +9,7 @@ export const getServerSideProps = wrapper.getServerSideProps(async ({ req, res, 
   } catch (error) {
     console.log(`Failed to fetch main page data: ${error}`);
   }
-  return { props: { kek: 'mem' } };
+  return { props: {} };
 });
 
 export default Main;

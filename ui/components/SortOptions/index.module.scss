@@ -1,0 +1,50 @@
+.sortOptions {
+  display: flex;
+
+  &__prefix {
+    font-size: 14px;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  &__item {
+    margin-right: 20px;
+
+    button {
+      font-size: 14px;
+      color: var(--paleGray);
+      text-decoration: none;
+    }
+
+    &:hover {
+      button {
+        color: var(--lightBlue);
+      }
+    }
+
+    &.active {
+      button {
+        color: var(--primary);
+
+        cursor: default;
+      }
+
+      &:hover {
+        button {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  &__cleanUp {
+    margin-left: auto;
+    button {
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}

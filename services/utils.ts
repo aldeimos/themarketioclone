@@ -23,3 +23,7 @@ export const getRelativeTime = (elapsed: string) => {
     }
   }
 };
+
+export const getSearchUrl = () => {
+  return new URLSearchParams(window.location.search);
+};

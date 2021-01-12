@@ -1,0 +1,9 @@
+.main {
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 126px 0 82px 0;
+  }
+}
