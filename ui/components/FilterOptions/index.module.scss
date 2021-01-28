@@ -1,0 +1,62 @@
+.filterOptions {
+  border: 1px solid var(--washedGray);
+
+  &__subtitle {
+    font-size: 14px;
+    font-family: "Roboto Bold", sans-serif;
+    margin-bottom: 14px;
+  }
+
+  &__sex {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--washedGray);
+  }
+
+  &__sexBtn {
+    width: 50%;
+    height: 50px;
+
+    font-size: 14px;
+    color: var(--paleGray);
+
+    span {
+      padding-bottom: 16px;
+    }
+
+    &.active {
+      color: var(--primary);
+
+      span {
+        border-bottom: 2px solid var(--primary);
+      }
+    }
+  }
+
+  &__categories,
+  &__price,
+  &__protected,
+  &__exchange {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 0 15px;
+
+    border-bottom: 1px solid var(--washedGray);
+  }
+
+  &__priceWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    >div {
+      width: calc(50% - 5px);
+    }
+  }
+
+  &__protected,
+  &__exchange {
+    padding-bottom: 15px;
+  }
+}

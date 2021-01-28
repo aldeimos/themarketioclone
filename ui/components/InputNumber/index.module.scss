@@ -1,0 +1,39 @@
+.inputNumber {
+  position: relative;
+
+  display: flex;
+  height: 42px;
+
+  border: 1px solid var(--washedGray);
+  border-radius: 2px;
+
+  &__prefix {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+
+    font-size: 14px;
+    color: var(--primary);
+
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    font-size: 14px;
+    color: var(--primary);
+
+    border: none;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &_prefix {
+      padding-left: 32px;
+    }
+  }
+}

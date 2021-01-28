@@ -1,0 +1,58 @@
+.checkbox {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 4px;
+  }
+
+  &__label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    padding-left: 27px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+
+      min-width: 16px;
+      height: 16px;
+
+      border-radius: 2px;
+      background-color: var(--secondary);
+      border: 1px solid var(--paleGray);
+    }
+
+    &:hover {
+      &::before {
+        border-color: var(--primary);
+      }
+    }
+
+  }
+
+  &__input {
+    position: absolute;
+
+    appearance: none;
+
+    &:checked ~ label {
+      &::before {
+        border-color: var(--primary);
+        background-color: var(--primary);
+        background-image: url('../../../public/icons/checked.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

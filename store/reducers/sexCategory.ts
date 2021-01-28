@@ -24,6 +24,31 @@ const state = (
 
       break;
     }
+    case actions.FETCH_SIZE_LIST: {
+      const { categories } = payload;
+      const menCategories: any = newState.get('menCategories').get('categories');
+      const womenCategories: any = newState.get('womenCategories').get('categories');
+      const mappedMenCategories = {};
+      const mappedWomenCategories = {};
+
+      menCategories.forEach((cat) => {
+        mappedMenCategories[`men-${cat.name}`] = cat;
+      });
+
+      womenCategories.forEach((cat) => {
+        mappedWomenCategories[`women-${cat.name}`] = cat;
+      });
+
+      categories.forEach((cat) => {
+        if (cat.sex == 'men' && mappedMenCategories[cat.name]) {
+          mappedMenCategories[cat.name].sizes = cat.sizes;
+        } else if (mappedWomenCategories[cat.name]) {
+          mappedWomenCategories[cat.name].sizes = cat.sizes;
+        }
+      });
+
+      break;
+    }
     default:
   }
 

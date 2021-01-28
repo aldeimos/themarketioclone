@@ -8,6 +8,7 @@ type FetchOptions = {
 
 export const API_ROUTES = {
   sexCategories: 'dictionaries/sexCategories',
+  size: 'dictionaries/sizes',
   blog: 'blog/pages',
   login: 'auth/emails/token',
   code: 'auth/emails',
